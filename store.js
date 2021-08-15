@@ -1,9 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { navSlice } from './slices/navSlice';
+import navReducer from './slices/navSlice';
 
-
-export const store = configureStore({
+export default configureStore({
     reducer: {
-        nav: navSlice,
+        nav: navReducer,
     },
-})
+});
+
+// const reducer = combineReducers({
+//     nav: navSlice,
+// })
+// const store = configureStore({
+//     reducer,
+// })
+// export default store;
